@@ -1,0 +1,20 @@
+{
+  "name": "chatty_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.15.2",
+    "node-uuid": "1.4.8",
+    "nodemon": "^1.11.0",
+    "uuid": "^3.0.1",
+    "ws": "2.3.1"
+  }
+}
