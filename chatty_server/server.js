@@ -11,7 +11,7 @@ const PORT = 3001;
 const server = express()
   // Make the express server serve static assets (html, javascript, css) from the /public folder
   .use(express.static('public'))
-  .listen(PORT, '0.0.0.0', 'localhost', () => console.log(`Listening on ${ PORT }`));
+  .listen(PORT, '0.0.0.0', 'localhost', () => console.log(`Listening on ${ PORT }`))
 let userCount = 0
   // Create the WebSockets server
 const wss = new SocketServer({ server });
@@ -25,7 +25,7 @@ wss.on('connection', function connection(ws) {
   });
   ws.on('message', function incoming(message) {
     message = JSON.parse(message)
-    message.type == 'postNotification' ? 'incomingNotification' : message.type
+    message.type = message.type == 'postNotification' ? 'incomingNotification' : message.type
     message.id = uuidV4()
     message = JSON.stringify(message)
     wss.clients.forEach(function each(client) {

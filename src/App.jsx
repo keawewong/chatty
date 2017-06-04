@@ -97,12 +97,15 @@ class App extends Component {
     return (
 
       < div >
-      < nav className = "navbar" >
-      < a href = "/"
-      className = "navbar-brand" > Chatty < /a> < h4 style = { alignRight } > { this.state.users.count } users online < /h4> < /nav > < MessageList > { messages } < / MessageList> < ChatBar username = { this.state.currentUser.name }
-      handleOnBlur = { this.handleOnBlur }
-      handleKeyPress = { this.handleKeyPress }
-      / > < /div >
+          < nav className = "navbar" >
+          < a href = "/"  className = "navbar-brand" > Chatty < /a>
+          < h4 style = { alignRight } > { this.state.users.count } users online < /h4> < /nav >
+          < MessageList > { messages } < / MessageList>
+          < ChatBar username = { this.state.currentUser.name }
+          handleOnBlur = { this.handleOnBlur }
+          handleKeyPress = { this.handleKeyPress }
+          / >
+      < /div >
 
     )
 
